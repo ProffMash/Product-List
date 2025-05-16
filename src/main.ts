@@ -1,5 +1,3 @@
-
-
 import { CartService } from './cart.service';
 import './style.css';
 
@@ -15,8 +13,7 @@ const cartService = new CartService();
 
 // Fetching desserts from data.json
 async function fetchDesserts(): Promise<Dessert[]> {
-  // const res = await fetch('/data.json');
-  const res = await fetch('public/data.json');
+  const res = await fetch('/data.json');
   const data = await res.json();
   // Adding id and flatten image for thumbnail
   return data.map((item: any, idx: number) => ({
